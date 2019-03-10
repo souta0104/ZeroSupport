@@ -1,13 +1,14 @@
-package com.risakokato.zerosupport.Activity;
+package com.risakokato.zerosupport.start;
 
 import android.content.Intent;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 
 import com.risakokato.zerosupport.R;
+import com.risakokato.zerosupport.main.MainActivity;
 
 public class StartActivity extends AppCompatActivity {
 

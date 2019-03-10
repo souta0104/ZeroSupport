@@ -1,16 +1,16 @@
-package com.risakokato.zerosupport.Activity;
+package com.risakokato.zerosupport.new_content;
 
 import android.app.DatePickerDialog;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentActivity;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.risakokato.zerosupport.Dialog.DatePickDialog;
-import com.risakokato.zerosupport.Model.Belongings;
+import com.risakokato.zerosupport.dialog.DatePickDialog;
+import com.risakokato.zerosupport.model.Belongings;
 import com.risakokato.zerosupport.R;
 
 import java.text.SimpleDateFormat;

@@ -1,4 +1,4 @@
-package com.risakokato.zerosupport.Adapter;
+package com.risakokato.zerosupport.list;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.risakokato.zerosupport.Model.Belongings;
+import com.risakokato.zerosupport.model.Belongings;
 import com.risakokato.zerosupport.R;
 
 import java.util.List;

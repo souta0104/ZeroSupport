@@ -1,4 +1,4 @@
-package com.risakokato.zerosupport.Adapter;
+package com.risakokato.zerosupport.main;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
-import com.risakokato.zerosupport.Model.Belongings;
+import com.risakokato.zerosupport.model.Belongings;
 import com.risakokato.zerosupport.R;
 
 import java.util.List;

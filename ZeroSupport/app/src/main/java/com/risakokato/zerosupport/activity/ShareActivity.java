@@ -1,9 +1,9 @@
-package com.risakokato.zerosupport.Activity;
+package com.risakokato.zerosupport.activity;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
@@ -26,7 +26,7 @@ public class ShareActivity extends AppCompatActivity {
             intent.setAction(Intent.ACTION_SEND);
             intent.setPackage(sharePackages[TWITTER_ID]);
             intent.setType("image/png");
-            intent.putExtra(Intent.EXTRA_TEXT, "アプリから共有\n『Zero Support』をDLして、忘れ物を無くそう！\n#ZeroSupport\nhttps://play.google.com/store/apps/details?id=com.risakokato.zerosupport");
+            intent.putExtra(Intent.EXTRA_TEXT, "アプリから共有\n『Zero Support』をDLして、忘れ物を無くそう！\n#App\nhttps://play.google.com/store/apps/details?id=com.risakokato.zerosupport");
             startActivity(intent);
         } else {
             shareAppDl(TWITTER_ID);

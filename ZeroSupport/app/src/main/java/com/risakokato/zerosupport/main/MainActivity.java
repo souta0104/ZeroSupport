@@ -1,19 +1,21 @@
-package com.risakokato.zerosupport.Activity;
+package com.risakokato.zerosupport.main;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.navigation.NavigationView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.ListView;
 
-import com.risakokato.zerosupport.Adapter.MainAdapter;
-import com.risakokato.zerosupport.Model.Belongings;
+import com.risakokato.zerosupport.activity.HelpActivity;
+import com.risakokato.zerosupport.list.ListActivity;
+import com.risakokato.zerosupport.activity.SettingActivity;
+import com.risakokato.zerosupport.activity.ShareActivity;
+import com.risakokato.zerosupport.model.Belongings;
 import com.risakokato.zerosupport.R;
 
 import java.text.SimpleDateFormat;
@@ -77,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.nav_list) {
-            Intent intent = new Intent(MainActivity.this,ListActivity.class);
+            Intent intent = new Intent(MainActivity.this, ListActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_manage) {

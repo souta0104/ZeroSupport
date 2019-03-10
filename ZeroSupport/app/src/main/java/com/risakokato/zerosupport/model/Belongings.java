@@ -1,4 +1,4 @@
-package com.risakokato.zerosupport.Model;
+package com.risakokato.zerosupport.model;
 
 import io.realm.RealmObject;
 
