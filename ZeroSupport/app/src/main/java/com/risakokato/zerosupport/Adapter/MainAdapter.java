@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+
 import com.risakokato.zerosupport.Model.Belongings;
 import com.risakokato.zerosupport.R;
 
@@ -30,7 +31,9 @@ public class MainAdapter extends ArrayAdapter<Belongings> {
     @Override
     public View getView(int position, View contentView, ViewGroup parent) {
 
-        final Belongings belo = getItem(position);
+        final Belongings item = getItem(position);
+        final Belongings belo = realm.where(Belongings.class).equalTo("updateDate", item.updateDate).findFirst();
+
 
         if (contentView == null) {
             contentView = layoutinflater.inflate(R.layout.layout_item_today, null);
@@ -40,37 +43,54 @@ public class MainAdapter extends ArrayAdapter<Belongings> {
         CheckBox checkBox = (CheckBox) contentView.findViewById(R.id.check);
         checkBox.setText(" " + belo.belongings);
 
-        if(belo.check == true){
+        if (belo.check) {
             checkBox.setChecked(true);
-        } else if (belo.check == false){
-            checkBox.setChecked(false);
+        } else {
+            if (true) {
+                checkBox.setChecked(false);
+            }
         }
 
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked == true) {
-                    realm.executeTransaction(new Realm.Transaction() {
-                        @Override
-                        public void execute(Realm realm) {
-                            belo.check = true;
-
-                        }
-                    });
-
+                if (isChecked) {
+                    realm.beginTransaction();
+                    belo.check = true;
+                    realm.commitTransaction();
                 } else {
-
-                    realm.executeTransaction(new Realm.Transaction() {
-                        @Override
-                        public void execute(Realm realm) {
-                            belo.check = false;
-
-                        }
-                    });
+                    realm.beginTransaction();
+                    belo.check = false;
+                    realm.commitTransaction();
                 }
             }
         });
+
+//        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                if (isChecked == true) {
+//                    realm.executeTransaction(new Realm.Transaction() {
+//                        @Override
+//                        public void execute(Realm realm) {
+//                            belo.check = true;
+//
+//                        }
+//                    });
+//
+//                } else {
+//
+//                    realm.executeTransaction(new Realm.Transaction() {
+//                        @Override
+//                        public void execute(Realm realm) {
+//                            belo.check = false;
+//
+//                        }
+//                    });
+//                }
+//            }
+//        });
 
         return contentView;
     }
