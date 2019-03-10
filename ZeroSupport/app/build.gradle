@@ -5,8 +5,6 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'realm-android'
 apply plugin: "androidx.navigation.safeargs"
 
-
-
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -43,10 +41,9 @@ dependencies {
     implementation "org.koin:koin-android-scope:$koin_version"
     implementation "org.koin:koin-android-viewmodel:$koin_version"
 
-    // AACNavigation
-    def nav_version = "1.0.0-rc02"
-    implementation "android.arch.navigation:navigation-fragment:$nav_version"
-    implementation "android.arch.navigation:navigation-ui:$nav_version"
+    def nav_version = "2.0.0-rc02"
+    implementation "androidx.navigation:navigation-fragment:$nav_version" // For Kotlin use navigation-fragment-ktx
+    implementation "androidx.navigation:navigation-ui:$nav_version"
 }
 repositories {
     mavenCentral()
