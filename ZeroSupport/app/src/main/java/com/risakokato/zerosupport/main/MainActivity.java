@@ -2,21 +2,22 @@
 //
 //import android.content.Intent;
 //import android.os.Bundle;
-//import com.google.android.material.navigation.NavigationView;
-//import androidx.core.view.GravityCompat;
-//import androidx.drawerlayout.widget.DrawerLayout;
-//import androidx.appcompat.app.ActionBarDrawerToggle;
-//import androidx.appcompat.app.AppCompatActivity;
-//import androidx.appcompat.widget.Toolbar;
 //import android.view.MenuItem;
 //import android.widget.ListView;
 //
+//import androidx.appcompat.app.ActionBarDrawerToggle;
+//import androidx.appcompat.app.AppCompatActivity;
+//import androidx.appcompat.widget.Toolbar;
+//import androidx.core.view.GravityCompat;
+//import androidx.drawerlayout.widget.DrawerLayout;
+//
+//import com.google.android.material.navigation.NavigationView;
+//import com.risakokato.zerosupport.R;
 //import com.risakokato.zerosupport.activity.HelpActivity;
-//import com.risakokato.zerosupport.list.ListActivity;
 //import com.risakokato.zerosupport.activity.SettingActivity;
 //import com.risakokato.zerosupport.activity.ShareActivity;
+//import com.risakokato.zerosupport.list.ListActivity;
 //import com.risakokato.zerosupport.model.Belongings;
-//import com.risakokato.zerosupport.R;
 //
 //import java.text.SimpleDateFormat;
 //import java.util.Date;
@@ -99,6 +100,7 @@
 //        drawer.closeDrawer(GravityCompat.START);
 //        return true;
 //    }
+//
 //    public void setTodayList() {
 //        RealmResults<Belongings> results = realm.where(Belongings.class).equalTo("date", today).findAll();
 //        List<Belongings> items = realm.copyFromRealm(results);
@@ -106,6 +108,7 @@
 //
 //        listView.setAdapter(adapter);
 //    }
+//
 //    @Override
 //    protected void onResume() {
 //        super.onResume();

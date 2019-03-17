@@ -10,8 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.risakokato.zerosupport.dialog.DatePickDialog;
-import com.risakokato.zerosupport.model.Belongings;
 import com.risakokato.zerosupport.R;
+import com.risakokato.zerosupport.model.Belongings;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

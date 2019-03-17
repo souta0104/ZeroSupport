@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 
 import com.risakokato.zerosupport.R;
-import com.risakokato.zerosupport.main.MainActivity;
+import com.risakokato.zerosupport.MainActivity;
 
 public class StartActivity extends AppCompatActivity {
 

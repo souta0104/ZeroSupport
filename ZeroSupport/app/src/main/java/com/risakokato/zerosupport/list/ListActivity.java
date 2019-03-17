@@ -4,16 +4,17 @@ package com.risakokato.zerosupport.list;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.risakokato.zerosupport.model.Belongings;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.risakokato.zerosupport.R;
+import com.risakokato.zerosupport.model.Belongings;
 import com.risakokato.zerosupport.new_content.NewContentActivity;
 
 import java.util.List;
@@ -31,11 +32,11 @@ public class ListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list);
+        setContentView(R.layout.fragment_list);
 
         realm = Realm.getDefaultInstance();
 
-        listView = (ListView) findViewById(R.id.listView);
+        listView = (ListView) findViewById(R.id.list_view);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -81,7 +82,8 @@ public class ListActivity extends AppCompatActivity {
             }
         });
     }
-    public void setListView(){
+
+    public void setListView() {
 
         RealmResults<Belongings> results = realm.where(Belongings.class).findAll();
         results = results.sort("date");
@@ -93,13 +95,14 @@ public class ListActivity extends AppCompatActivity {
     }
 
     @Override
-    protected  void onResume(){
+    protected void onResume() {
         super.onResume();
 
         setListView();
     }
+
     @Override
-    protected void onDestroy(){
+    protected void onDestroy() {
         super.onDestroy();
 
         realm.close();

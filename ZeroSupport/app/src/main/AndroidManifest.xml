@@ -23,7 +23,7 @@
             android:label="設定" />
         <activity android:name=".new_content.NewContentActivity" />
         <activity
-            android:name=".main.MainActivity"
+            android:name=".MainActivity"
             android:label="今日の持ち物"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

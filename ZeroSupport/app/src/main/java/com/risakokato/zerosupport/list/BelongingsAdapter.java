@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.risakokato.zerosupport.model.Belongings;
 import com.risakokato.zerosupport.R;
+import com.risakokato.zerosupport.model.Belongings;
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ public class BelongingsAdapter extends ArrayAdapter<Belongings> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        Belongings belo= getItem(position);
+        Belongings belo = getItem(position);
 
         if (convertView == null) {
             convertView = layoutinflater.inflate(R.layout.layout_item_list, null);
