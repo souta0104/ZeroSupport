@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
     app:startDestination="@id/mainFragment">
 
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.risakokato.zerosupport.main.MainFragment"
-        android:label="MainFragment" >
+        android:label="MainFragment">
         <action
             android:id="@+id/action_mainFragment_to_listFragment"
             app:destination="@id/listFragment" />
@@ -14,9 +15,16 @@
     <fragment
         android:id="@+id/listFragment"
         android:name="com.risakokato.zerosupport.list.ListFragment"
-        android:label="ListFragment" >
+        android:label="ListFragment">
         <action
             android:id="@+id/action_listFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_newContentFragment"
+            app:destination="@id/newContentFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/newContentFragment"
+        android:name="com.risakokato.zerosupport.new_content.NewContentFragment"
+        android:label="NewContentFragment" />
 </navigation>

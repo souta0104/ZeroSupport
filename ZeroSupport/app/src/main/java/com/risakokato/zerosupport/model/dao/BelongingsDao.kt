@@ -11,6 +11,9 @@ interface BelongingsDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun add(belongingsRoom: BelongingsRoom)
 
+    @Query("SELECT * FROM belongingsRoom WHERE isToday")
+    fun findToday(): List<BelongingsRoom>
+
     @Delete
     fun delete(belongingsRoom: BelongingsRoom)
 

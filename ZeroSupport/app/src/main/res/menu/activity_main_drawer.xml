@@ -7,11 +7,11 @@
         <item
             android:id="@+id/mainFragment"
             android:icon="@drawable/ic_menu_list"
-            android:title="ホーム" />
+            android:title="今日の持ち物" />
         <item
             android:id="@+id/listFragment"
             android:icon="@drawable/ic_menu_list"
-            android:title="一覧" />
+            android:title="すべての持ち物" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"

@@ -10,5 +10,6 @@ data class BelongingsRoom(
         var belongings: String,
         var date: String,
         var updateDate: String,
-        var isChecked: Boolean
+        var isChecked: Boolean,
+        var isToday: Boolean
 )
