@@ -1,16 +1,17 @@
 package com.risakokato.zerosupport.new_content;
 
 import android.app.DatePickerDialog;
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.risakokato.zerosupport.dialog.DatePickDialog;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentActivity;
+
 import com.risakokato.zerosupport.R;
+import com.risakokato.zerosupport.dialog.DatePickDialog;
 import com.risakokato.zerosupport.model.Belongings;
 
 import java.text.SimpleDateFormat;
@@ -50,6 +51,7 @@ public class NewContentActivity extends FragmentActivity implements DatePickerDi
 
         belongingsEdit = findViewById(R.id.belongingsEdit);
     }
+
     @Override
     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
 
@@ -63,6 +65,7 @@ public class NewContentActivity extends FragmentActivity implements DatePickerDi
         newFragment.show(getSupportFragmentManager(), "datePicker");
 
     }
+
     public void addBelongings(View view) {
         String belongins = belongingsEdit.getText().toString();
 
@@ -72,7 +75,7 @@ public class NewContentActivity extends FragmentActivity implements DatePickerDi
 
         String updateDate = dateText2;
 
-        save(belongins, date, check,updateDate);
+        save(belongins, date, check, updateDate);
 
         finish();
     }

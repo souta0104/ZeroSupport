@@ -56,4 +56,10 @@ class MainFragment : Fragment(), MainContract.View, MainAdapter.OnCheckedChangeL
     override fun onChecked(buttonView: View, isChecked: Boolean) {
         println("clicked")
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        job.cancel()
+    }
 }
